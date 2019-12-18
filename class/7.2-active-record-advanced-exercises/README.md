@@ -1,7 +1,7 @@
 To Do:
 ======
 
-0. Continue from the assignment built in [**7.1 active-record-basic-exercises**](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/tree/master/class/7.1-active-record-basics-exercises)
+0. Continue from the assignment built in [**7.1 active-record-basic-exercises**](class/7.1-active-record-basics-exercises)
 
 1. Create a model called `Project` with a name:string and employees_count:integer field
 2. Create a many-to-many relationship between `employee` and `project` using a join table\model called `EmployeeProject`.

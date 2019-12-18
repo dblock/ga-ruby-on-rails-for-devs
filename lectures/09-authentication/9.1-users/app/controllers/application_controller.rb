@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-  
+
   before_filter :authenticate
 
   def authenticate

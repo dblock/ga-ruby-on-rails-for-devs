@@ -1,4 +1,3 @@
-require File.expand_path('../application', __FILE__)
+require File.expand_path('application', __dir__)
 
 RailsMvc::Application.initialize!
-

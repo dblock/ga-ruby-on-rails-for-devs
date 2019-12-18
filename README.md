@@ -1,21 +1,7 @@
 Ruby on Rails for Developers
 ============================
 
-![GeneralAssemb.ly](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/raw/master/images/ga.png "GeneralAssemb.ly")
-
 This course teaches experienced developers [Ruby](http://www.ruby-lang.org) and [Ruby on Rails](http://rubyonrails.org/). It's designed to be taught by a practicing rubyist and a teaching assistant. Both individuals must have expert understanding of Ruby, Rack and Ruby on Rails. The ideal class size is 12-15 students, each having prior application development track record. The lesson plan is conceived as 12 two-hour lectures with homework given after each of the first 6 courses. Assignments are tracked in [Pivotal Tracker](http://pivotaltracker.com). Subsequent 6 lectures alternate class material with coding. The course ends with 8 hours of building a final project for obtaining certification.
-
-These materials were developed for General Assembly's class: Ruby on Rails for Developers. To apply to take the next itearation of this class through GA visit: [Rails for Dev @ GA](https://generalassemb.ly/ruby-on-rails-for-devs).
-
-Essentials
-----------
-
-* [Google Group](http://groups.google.com/group/ga-ruby-on-rails-for-devs)
-
-Translations
-------------
-
-* [Español](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/tree/spanish)
 
 Class Material
 --------------
@@ -28,24 +14,24 @@ We step aside to teach Ruby meta-programming before lecturing on ActiveRecord, E
 
 Final lectures include RESTful APIs with Rails and [Grape](https://github.com/intridea/grape), an introduction to NoSQL databases with [MongoDB](http://mongodb.org). We also recommend you offer students an opportunity to revisit any topic that was insufficiently clear or lecture on a topic that they are curious about.
 
-* [Introduction: Getting Started](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/00-getting-started/README.md)
-* [Lecture 1: Developer Workflow](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/01-developer-workflow/README.md)
-* [Lecture 2: Ruby Basics](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/02-ruby-basics/README.md)
-* [Lecture 3: Rack](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/03-rack/README.md)
-* [Lecture 4: Rails MVC](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/04-rails-mvc/README.md)
-* [Lecture 5: RSpec](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/05-rspec/README.md)
-* [Lecture 6: Ruby Meta-Programming](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/06-ruby-meta-programming/README.md)
-* [Lecture 7: ActiveRecord](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/07-active-record/README.md)
-* [Lecture 8: Rendering in Rails](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/08-erb-haml-sass/README.md)
-* [Lecture 9: Authentication](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/09-authentication/README.md)
-* [Lecture 10: RESTful API](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/10-restful-api/README.md)
-* [Lecture 11: NoSQL with MongoDB](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/11-nosql-with-mongodb/README.md)
-* [Lecture 12: Caching](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/lectures/12-caching/README.md)
+* [Introduction: Getting Started](lectures/00-getting-started/README.md)
+* [Lecture 1: Developer Workflow](lectures/01-developer-workflow/README.md)
+* [Lecture 2: Ruby Basics](lectures/02-ruby-basics/README.md)
+* [Lecture 3: Rack](lectures/03-rack/README.md)
+* [Lecture 4: Rails MVC](lectures/04-rails-mvc/README.md)
+* [Lecture 5: RSpec](lectures/05-rspec/README.md)
+* [Lecture 6: Ruby Meta-Programming](lectures/06-ruby-meta-programming/README.md)
+* [Lecture 7: ActiveRecord](lectures/07-active-record/README.md)
+* [Lecture 8: Rendering in Rails](lectures/08-erb-haml-sass/README.md)
+* [Lecture 9: Authentication](lectures/09-authentication/README.md)
+* [Lecture 10: RESTful API](lectures/10-restful-api/README.md)
+* [Lecture 11: NoSQL with MongoDB](lectures/11-nosql-with-mongodb/README.md)
+* [Lecture 12: Caching](lectures/12-caching/README.md)
 
 Exercises
 ---------
 
-* [Exercises](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/tree/master/class)
+* [Exercises](class)
 
 Contributing
 ------------
@@ -71,5 +57,5 @@ This course has been produced in partnership with [Pivotal Labs](http://pivotall
 Copyright
 ---------
 
-(c) 2012 [GeneralAssemb.ly](https://generalassemb.ly/ruby-on-rails-for-devs), [Daniel Doubrovkine](http://github.com/dblock) and [contributors](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/blob/master/CONTRIBUTORS.md).
+(c) 2012 [GeneralAssemb.ly](https://generalassemb.ly/ruby-on-rails-for-devs), [Daniel Doubrovkine](http://github.com/dblock) and [contributors](CONTRIBUTORS.md).
 

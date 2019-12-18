@@ -1,12 +1,10 @@
 class ThingsController < ApplicationController
-  before_filter :get_thing, :only => [ :edit, :show, :update, :destroy ]
-  
+  before_filter :get_thing, only: %i[edit show update destroy]
+
   def get_thing
-    begin
-      @thing = Thing.find(params[:id])
-    rescue Mongoid::Errors::DocumentNotFound, BSON::InvalidObjectId
-      render file: "public/404.html", status: 404
-    end
+    @thing = Thing.find(params[:id])
+  rescue Mongoid::Errors::DocumentNotFound, BSON::InvalidObjectId
+    render file: 'public/404.html', status: 404
   end
 
   # GET /things
@@ -15,8 +13,7 @@ class ThingsController < ApplicationController
   end
 
   # GET /things/1
-  def show
-  end
+  def show; end
 
   # GET /things/new
   def new
@@ -24,8 +21,7 @@ class ThingsController < ApplicationController
   end
 
   # GET /things/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /things
   def create
@@ -33,7 +29,7 @@ class ThingsController < ApplicationController
     if @thing.save
       redirect_to @thing, notice: 'Thing was successfully created.'
     else
-      render action: "new"
+      render action: 'new'
     end
   end
 
@@ -42,7 +38,7 @@ class ThingsController < ApplicationController
     if @thing.update_attributes(params[:thing])
       redirect_to @thing, notice: 'Thing was successfully updated.'
     else
-      render action: "edit"
+      render action: 'edit'
     end
   end
 

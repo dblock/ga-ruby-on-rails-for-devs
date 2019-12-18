@@ -1,5 +1,4 @@
-puts "Loading config/routes.rb"
+puts 'Loading config/routes.rb'
 
 HelloWorld::Application.routes.draw do
-  
 end

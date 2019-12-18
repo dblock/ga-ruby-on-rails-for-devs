@@ -1,5 +1,5 @@
 # a simple loop
-for i in 1..5
+(1..5).each do |i|
   puts i
 end
 
@@ -9,7 +9,6 @@ end
 end
 
 # a loop 5 times, starts at zero
-5.times { |i|
+5.times do |i|
   puts i
-}
-
+end

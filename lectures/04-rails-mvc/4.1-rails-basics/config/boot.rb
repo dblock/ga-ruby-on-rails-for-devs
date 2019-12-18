@@ -1,4 +1,4 @@
-puts "Loading config/boot.rb"
+puts 'Loading config/boot.rb'
 
 require 'rubygems'
 

@@ -1,23 +1,22 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
-gem 'pg'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'pg'
+gem 'rails', '3.2.1'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'awesome_print'
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'fabrication'
   gem 'ffaker'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'awesome_print'
-  gem 'database_cleaner'
 end
-

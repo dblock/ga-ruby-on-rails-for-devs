@@ -1,6 +1,6 @@
-puts "Loading config/environment.rb"
+puts 'Loading config/environment.rb'
 
-require File.expand_path('../application', __FILE__)
+require File.expand_path('application', __dir__)
 
-puts "HelloWorld::Application.initialize!"
+puts 'HelloWorld::Application.initialize!'
 HelloWorld::Application.initialize!

@@ -1,6 +1,6 @@
 require 'haml'
 
-s = %q{
+s = '
 
 !!!
 
@@ -12,20 +12,18 @@ s = %q{
   %body
 
     / a paragraph of class intro
-    
+
     %p.intro
       An Introduction to HAML
-      
+
     / a div with id=links
-    
+
     #links
 
       %a{ href: "http://generalassemb.ly" } GeneralAssemb.ly
 
-}
+'
 
 e = Haml::Engine.new s
 
 puts e.render
-
-

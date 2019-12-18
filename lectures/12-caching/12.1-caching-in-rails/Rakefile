@@ -1,5 +1,4 @@
 #!/usr/bin/env rake
-
-require File.expand_path('../config/application', __FILE__)
+require File.expand_path('config/application', __dir__)
 
 WidgetApp::Application.load_tasks

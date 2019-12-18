@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create!(params[:post].merge( { user: current_user } ))
+    @post = Post.create!(params[:post].merge(user: current_user))
     redirect_to post_path(@post)
   end
 end

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,42 +10,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131054202) do
-
-  create_table "controls", :force => true do |t|
-    t.string   "name"
-    t.integer  "gadget_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+ActiveRecord::Schema.define(version: 20_120_131_054_202) do
+  create_table 'controls', force: true do |t|
+    t.string   'name'
+    t.integer  'gadget_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "desktops", :force => true do |t|
-    t.string   "os"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table 'desktops', force: true do |t|
+    t.string   'os'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "gadgets", :force => true do |t|
-    t.string   "name"
-    t.integer  "widget_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "type"
-    t.integer  "dock_index"
+  create_table 'gadgets', force: true do |t|
+    t.string   'name'
+    t.integer  'widget_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string   'type'
+    t.integer  'dock_index'
   end
 
-  create_table "webpages", :force => true do |t|
-    t.string   "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table 'webpages', force: true do |t|
+    t.string   'url'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "widgets", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "displayable_id"
-    t.string   "displayable_type"
+  create_table 'widgets', force: true do |t|
+    t.string   'name'
+    t.datetime 'created_at',       null: false
+    t.datetime 'updated_at',       null: false
+    t.integer  'displayable_id'
+    t.string   'displayable_type'
   end
-
 end

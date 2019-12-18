@@ -1,6 +1,6 @@
 Fabricator(:gadget) do
-  name { sequence { |i| "Gadget #{i}"} }
-  type { %w(HeaderGadget SidebarGadget).sample }
+  name { sequence { |i| "Gadget #{i}" } }
+  type { %w[HeaderGadget SidebarGadget].sample }
   dock_index { rand(5) }
   widget
 end
@@ -10,10 +10,10 @@ Fabricator(:gadget_with_controls, from: :gadget) do
 end
 
 Fabricator(:sidebar_gadget, from: :gadget) do
-  type { "SidebarGadget" }
+  type { 'SidebarGadget' }
 end
 
 Fabricator(:header_gadget, from: :gadget) do
-  type { "HeaderGadget" }
+  type { 'HeaderGadget' }
   dock_index { nil }
 end

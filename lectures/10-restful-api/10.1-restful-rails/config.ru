@@ -1,3 +1,2 @@
-require File.expand_path('../config/environment', __FILE__)
+require File.expand_path('config/environment', __dir__)
 run RailsMvc::Application
-

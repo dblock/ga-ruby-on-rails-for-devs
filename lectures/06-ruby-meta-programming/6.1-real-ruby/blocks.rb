@@ -1,6 +1,6 @@
 def f1(& b)
-  puts "#{b.class}"
-  yield 
+  puts b.class.to_s
+  yield
 end
 
 f1 do
@@ -8,19 +8,15 @@ f1 do
 end
 
 class F
-
-  def thing(& b)
+  def thing
     if block_given?
       yield @thing
     else
       @thing
     end
   end
-  
-  def thing=(value)
-    @thing = value
-  end
 
+  attr_writer :thing
 end
 
 f = F.new
@@ -32,5 +28,3 @@ p f.thing # 42
 f.thing do |value|
   p value * 2 # 84
 end
-
-

@@ -3,6 +3,5 @@ class AddDisplayableToWidgets < ActiveRecord::Migration
     add_column :widgets, :displayable_id, :integer
 
     add_column :widgets, :displayable_type, :string
-
   end
 end

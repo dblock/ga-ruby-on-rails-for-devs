@@ -1,6 +1,6 @@
 WidgetApp::Application.routes.draw do
   resources :widgets, only: [:index]
-  root :to => 'widgets#index'
+  root to: 'widgets#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

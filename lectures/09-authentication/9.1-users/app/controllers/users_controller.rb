@@ -1,13 +1,11 @@
 class UsersController < ApplicationController
-  before_filter :get_user, :only => [ :edit, :show, :update, :destroy ]
-  skip_filter :authenticate, :only => [ :new, :create ]
-  
+  before_filter :get_user, only: %i[edit show update destroy]
+  skip_filter :authenticate, only: %i[new create]
+
   def get_user
-    begin
-      @user = User.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      render file: "public/404.html", status: 404
-    end
+    @user = User.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    render file: 'public/404.html', status: 404
   end
 
   # GET /users
@@ -16,8 +14,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1
-  def show
-  end
+  def show; end
 
   # GET /users/new
   def new
@@ -25,8 +22,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /users
   def create
@@ -34,26 +30,26 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user, notice: 'User was successfully created.'
     else
-      render action: "new"
+      render action: 'new'
     end
   end
 
   # PUT /users/1
   def update
     if @user != current_user
-      flash.now[:error] = "Cannot modify other users."
-      render action: "edit"
+      flash.now[:error] = 'Cannot modify other users.'
+      render action: 'edit'
     elsif @user.update_attributes(params[:user])
       redirect_to @user, notice: 'User was successfully updated.'
     else
-      render action: "edit"
+      render action: 'edit'
     end
   end
 
   # DELETE /users/1
   def destroy
     if @user != current_user
-      flash.now[:error] = "Cannot delete other users."
+      flash.now[:error] = 'Cannot delete other users.'
     else
       @user.destroy
       sign_out

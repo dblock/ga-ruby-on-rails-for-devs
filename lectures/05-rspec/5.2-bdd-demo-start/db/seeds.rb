@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 if Rails.env.test? || Rails.env.development?
-  User.create!(email: "user@email.com", password: "password")
+  User.create!(email: 'user@email.com', password: 'password')
 end

@@ -1,17 +1,17 @@
 begin
-  raise "error!"
+  raise 'error!'
 rescue Exception => e
   puts e.inspect # #<RuntimeError: error!>
 end
 
 begin
-  raise Exception.new("error!")
+  raise Exception, 'error!'
 rescue Exception => e
   puts e.inspect # #<Exception: error!>
 end
 
 begin
-  raise RuntimeError.new("error!")
+  raise 'error!'
 rescue Exception => e
   puts e.inspect # #<RuntimeError: error!>
 end
@@ -21,7 +21,7 @@ end
 
 count = 1
 begin
-  raise BadError.new("error!") if count <= 2
+  raise BadError, 'error!' if count <= 2
 rescue Exception => e
   count += 1
   puts e.inspect # #<BadError: error!> (twice)

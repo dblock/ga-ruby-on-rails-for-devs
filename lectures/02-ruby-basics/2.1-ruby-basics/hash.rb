@@ -1,17 +1,15 @@
-# coding: utf-8
-
-hash = { 
-  "red" => "rouge",
-  "yellow" => "jaune"
+hash = {
+  'red' => 'rouge',
+  'yellow' => 'jaune'
 }
 
 hash.each_pair do |name, value|
   puts "#{name}: #{value}"
 end
 
-hash = { 
-  :red => { :french => "rouge", :russian => "красный" },
-  :yellow => { :french => "jaune", :russian => "жёлтый" }
+hash = {
+  red: { french: 'rouge', russian: 'красный' },
+  yellow: { french: 'jaune', russian: 'жёлтый' }
 }
 
 hash.each do |entry|
@@ -23,4 +21,3 @@ hash.each_pair do |name, value|
 end
 
 puts hash[:red][:russian] # "красный"
-

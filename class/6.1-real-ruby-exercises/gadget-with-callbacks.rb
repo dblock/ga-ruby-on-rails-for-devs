@@ -1,11 +1,9 @@
-=begin
-
-Implement a model called `Gadget` and a model called `Widget` that implements a callback in pure Ruby. A widget should contain a collection of gadgets. Every time a widget receives a gadget, invoke a `:when_added` callback. Every time a widget becomes empty, invoke a `:when_empty` callback.
-
-=end
+#
+# Implement a model called `Gadget` and a model called `Widget` that implements a callback in pure Ruby. A widget should contain a collection of gadgets. Every time a widget receives a gadget, invoke a `:when_added` callback. Every time a widget becomes empty, invoke a `:when_empty` callback.
+#
 
 module CollectionNotifier
-  EVENTS = [:added, :empty]
+  EVENTS = %i[added empty].freeze
 
   def self.included(base)
     base.extend ClassMethods
@@ -13,19 +11,20 @@ module CollectionNotifier
   end
 
   module ClassMethods
-
     EVENTS.each do |event|
-
       # Create 'when_<event>' class method
       define_method("when_#{event}") do |*callbacks|
         variable_name = "@_#{event}_callbacks"
 
         # initialize a class level instance variable
-        instance_variable_set(variable_name, []) unless instance_variable_defined? variable_name
+        unless instance_variable_defined? variable_name
+          instance_variable_set(variable_name, [])
+        end
 
         callbacks.each do |callback|
-          raise ArgumentError, "when_added callback must be either be a string, a symbol, or callable"\
+          raise ArgumentError, 'when_added callback must be either be a string, a symbol, or callable'\
             unless callback.respond_to?(:call) || callback.is_a?(Symbol) || callback.is_a?(String)
+
           instance_variable_get(variable_name) << callback
         end
       end
@@ -33,7 +32,6 @@ module CollectionNotifier
   end
 
   module InstanceMethods
-
     # Create '_invoke_<event>_callbacks' to allow one to invoke event callbacks
     def self.included(base)
       EVENTS.each do |event|
@@ -42,7 +40,7 @@ module CollectionNotifier
             if callback.is_a? Proc
               callback.call
             else
-              self.send(callback) # Send either symbol or string to calling instance
+              send(callback) # Send either symbol or string to calling instance
             end
           end
         end
@@ -58,15 +56,16 @@ class Widget
   include CollectionNotifier
 
   # Add symbols, representing the methods on the instance, and lambdas to the callback
-  when_added :custom_add_function, ->{ p "Gadget added!"}
-  when_empty :custom_empty_function, ->{ p "Widget is empty of gadgets!" }
+  when_added :custom_add_function, -> { p 'Gadget added!' }
+  when_empty :custom_empty_function, -> { p 'Widget is empty of gadgets!' }
 
   def initialize
     @_collection = []
   end
 
   def add(gadget)
-    raise "Can only push gadgets" unless gadget.is_a? Gadget
+    raise 'Can only push gadgets' unless gadget.is_a? Gadget
+
     @_collection << gadget
     _invoke_added_callbacks
   end
@@ -81,11 +80,11 @@ class Widget
   private
 
   def custom_add_function
-    p "custom add function"
+    p 'custom add function'
   end
 
   def custom_empty_function
-    p "custom empty function"
+    p 'custom empty function'
   end
 end
 

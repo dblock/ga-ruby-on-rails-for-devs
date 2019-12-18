@@ -49,4 +49,4 @@ class WebServer
 end
 
 puts 'Server ready at http://localhost:9292'
-Rack::Handler::Mongrel.run WebServer.new, Port: 9292
+Rack::Handler::Thin.run WebServer.new, Port: 9292

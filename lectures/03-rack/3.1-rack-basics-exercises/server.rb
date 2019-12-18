@@ -8,4 +8,4 @@ class WebServer
   end
 end
 
-Rack::Handler::Mongrel.run WebServer.new, Port: 9292
+Rack::Handler::Thin.run WebServer.new, Port: 9292

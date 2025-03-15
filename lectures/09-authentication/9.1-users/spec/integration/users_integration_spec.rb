@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 feature 'Users', js: true do
@@ -52,7 +54,7 @@ feature 'Users', js: true do
       visit '/users'
       page.evaluate_script('window.confirm = function() { return true; }')
       click_link 'Destroy'
-      User.count.should == 0
+      User.count.should.zero?
       current_path.should == '/signin'
     end
   end

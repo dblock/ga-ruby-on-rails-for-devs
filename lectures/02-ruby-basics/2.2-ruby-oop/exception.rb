@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 begin
   raise 'error!'
 rescue Exception => e
@@ -5,7 +7,7 @@ rescue Exception => e
 end
 
 begin
-  raise Exception, 'error!'
+  raise StandardError, 'error!'
 rescue Exception => e
   puts e.inspect # #<Exception: error!>
 end

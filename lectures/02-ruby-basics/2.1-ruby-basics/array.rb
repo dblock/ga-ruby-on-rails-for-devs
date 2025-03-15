@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # containers may contain objects of any type
 #  rouge (String)
 #  1 (Fixnum)

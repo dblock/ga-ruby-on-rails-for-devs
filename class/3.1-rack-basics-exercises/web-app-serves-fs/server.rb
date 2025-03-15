@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'rack'
 
@@ -15,9 +17,7 @@ class WebServer
       raise SecurityError unless full_path.start_with?(@public_path)
 
       # the default file name inside a folder is index.html
-      if File.directory?(full_path)
-        full_path = File.join(full_path, 'index.html')
-      end
+      full_path = File.join(full_path, 'index.html') if File.directory?(full_path)
       # serve file content
       content = File.read(full_path)
       serve 200, env, content, Rack::Mime.mime_type(File.extname(full_path))

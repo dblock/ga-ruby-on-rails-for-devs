@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # a simple loop
 (1..5).each do |i|
   puts i

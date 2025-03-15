@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BddDemo
   module RequestTestHelpers
     def sign_in(user)

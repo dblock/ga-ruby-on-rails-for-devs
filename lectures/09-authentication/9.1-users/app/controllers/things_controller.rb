@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ThingsController < ApplicationController
   before_filter :get_thing, only: %i[edit show update destroy]
 

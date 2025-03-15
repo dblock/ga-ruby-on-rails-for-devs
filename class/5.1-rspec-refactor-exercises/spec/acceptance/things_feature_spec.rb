@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 feature 'Things', driver: :selenium do
@@ -30,6 +32,6 @@ feature 'Things', driver: :selenium do
     visit '/things'
     page.evaluate_script('window.confirm = function() { return true; }')
     click_link 'Destroy'
-    Thing.count.should == 0
+    Thing.count.should.zero?
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 WidgetApp::Application.routes.draw do
   resources :widgets, only: [:index]
   root to: 'widgets#index'

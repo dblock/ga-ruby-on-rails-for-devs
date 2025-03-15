@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Thing
   def method_missing(method, * args)
     if method.to_s[0..2] == 'to_'
-      "i am a #{method.to_s[3..-1]}"
+      "i am a #{method.to_s[3..]}"
     else
       super
     end

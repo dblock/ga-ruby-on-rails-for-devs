@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateWebpages < ActiveRecord::Migration
   def change
     create_table :webpages do |t|

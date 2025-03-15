@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Fabricator(:webpage) do
   url { Faker::Internet.http_url }
 end

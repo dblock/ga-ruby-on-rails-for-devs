@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ThingsController < ApplicationController
   # GET /things
   # GET /things.json

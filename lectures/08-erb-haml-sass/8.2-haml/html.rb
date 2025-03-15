@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'haml'
 
 e = Haml::Engine.new '%p Hello World'

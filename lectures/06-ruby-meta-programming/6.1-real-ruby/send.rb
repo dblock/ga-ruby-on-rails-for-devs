@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 p 'hello world'.send(:upcase) # "HELLO WORLD"
 p %w[hello world].map(&:upcase) # ["HELLO", "WORLD"]
 

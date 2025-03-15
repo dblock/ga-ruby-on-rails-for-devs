@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # Monkey patch the `Hash` class with a new `squared_euclidean_distance` method that takes another `Hash` as a parameter,
 # and calculates the squared Euclidean distance with it. The squared Euclidean distance between `{ x: 1, y: 2 }` and
@@ -21,12 +23,8 @@ class Hash
   end
 end
 
-unless { x: 1, y: 2 }.squared_euclidean_distance(z: 3) == 14
-  raise 'invalid distance between two different hashes'
-end
-unless {}.squared_euclidean_distance({}) == 0
-  raise 'invalid distance between empty hashes'
-end
+raise 'invalid distance between two different hashes' unless { x: 1, y: 2 }.squared_euclidean_distance(z: 3) == 14
+raise 'invalid distance between empty hashes' unless {}.squared_euclidean_distance({}).zero?
 unless { x: 2, y: 3 }.squared_euclidean_distance(y: 4, x: 5) == 10
   raise 'invalid distance between two overlapping hashes'
 end
@@ -36,11 +34,7 @@ end
 unless { a: 2, b: 3 }.squared_euclidean_distance(b: 4, c: 5) == 30
   raise 'invalid distance between two partially overlapping hashes with keys other than :x, :y and :z'
 end
-unless { x: 10, y: 20 }.squared_euclidean_distance({}) == 500
-  raise 'invalid distance between a hash and an empty hash'
-end
-unless {}.squared_euclidean_distance(x: 10, y: 20) == 500
-  raise 'invalid distance between an empty hash and a hash'
-end
+raise 'invalid distance between a hash and an empty hash' unless { x: 10, y: 20 }.squared_euclidean_distance({}) == 500
+raise 'invalid distance between an empty hash and a hash' unless {}.squared_euclidean_distance(x: 10, y: 20) == 500
 
 puts 'correct results in squared_euclidean_distance'

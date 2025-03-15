@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe ThingsController do
@@ -179,7 +181,7 @@ describe ThingsController do
 
       it 'destroys the requested thing' do
         delete :destroy, id: @thing.id.to_s
-        Thing.count.should == 0
+        Thing.count.should.zero?
       end
     end
   end

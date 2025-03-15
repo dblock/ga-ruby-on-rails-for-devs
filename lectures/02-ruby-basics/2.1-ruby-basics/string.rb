@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 puts 'Hello World'.downcase # "hello world"
 
 s = 'Hello World'

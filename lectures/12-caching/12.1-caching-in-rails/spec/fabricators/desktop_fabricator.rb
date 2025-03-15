@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Fabricator(:desktop) do
   os { Faker::Lorem.word }
 end

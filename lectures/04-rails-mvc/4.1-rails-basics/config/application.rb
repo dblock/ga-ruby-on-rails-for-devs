@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 puts 'Loading application.rb'
 
 require File.expand_path('boot', __dir__)

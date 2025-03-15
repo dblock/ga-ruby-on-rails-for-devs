@@ -1,11 +1,11 @@
+# frozen_string_literal: true
+
 class Color
   def initialize(name = nil)
     @name = name
   end
 
-  attr_writer :name
-
-  attr_reader :name
+  attr_accessor :name
 end
 
 puts Color.new.inspect # <Color: @name=nil>

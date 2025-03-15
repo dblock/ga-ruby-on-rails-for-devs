@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def splat(* args)
   p "#{args.length}: #{args}"
 end

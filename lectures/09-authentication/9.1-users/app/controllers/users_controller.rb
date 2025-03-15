@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_filter :get_user, only: %i[edit show update destroy]
   skip_filter :authenticate, only: %i[new create]

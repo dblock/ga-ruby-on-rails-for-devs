@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SidebarGadget < Gadget
   validates :dock_index, presence: true, numericality: true
 

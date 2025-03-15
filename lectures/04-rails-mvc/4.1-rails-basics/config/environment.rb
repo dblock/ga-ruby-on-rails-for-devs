@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 puts 'Loading config/environment.rb'
 
 require File.expand_path('application', __dir__)

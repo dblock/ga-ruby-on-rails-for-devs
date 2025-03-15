@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe User do
@@ -29,7 +31,8 @@ describe User do
   context 'password' do
     it { should validate_presence_of(:password) }
     it 'should require a matching password confirmation' do
-      User.new(name: 'dummy', email: 'dummy@example.com', password: '', password_confirmation: 'invalid').should_not be_valid
+      User.new(name: 'dummy', email: 'dummy@example.com', password: '',
+               password_confirmation: 'invalid').should_not be_valid
     end
     it 'should reject short passwords' do
       pwd = 'a' * 5

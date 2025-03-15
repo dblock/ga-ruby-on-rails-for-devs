@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class ThingsController < ApplicationController
   before_filter :get_thing, only: %i[show edit update destroy]
 
   def index
-    if params[:term]
-      @things = Thing.find(:all, conditions: ['name LIKE ?', "#{params[:term]}%"], limit: 5, order: 'name')
-    else
-      @things = Thing.all
-    end
+    @things = if params[:term]
+                Thing.find(:all, conditions: ['name LIKE ?', "#{params[:term]}%"], limit: 5, order: 'name')
+              else
+                Thing.all
+              end
     respond_to do |format|
       format.html
       format.json { render json: @things }

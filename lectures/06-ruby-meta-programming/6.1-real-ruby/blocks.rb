@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 def f1(& b)
-  puts b.class.to_s
+  puts b.class
   yield
 end
 

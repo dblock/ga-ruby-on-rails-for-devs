@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddDisplayableToWidgets < ActiveRecord::Migration
   def change
     add_column :widgets, :displayable_id, :integer

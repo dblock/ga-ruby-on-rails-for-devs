@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -10,4 +12,4 @@
 # For demonstration purposes only, seed development database with fabricated data:
 
 3.times { Fabricate(:desktop_with_widgets) }
-1.times { Fabricate(:webpage_with_widgets) }
+Fabricate(:webpage_with_widgets)

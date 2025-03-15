@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Implement an `after` callback that prints the value of the item being added.
 
 module Callbacks

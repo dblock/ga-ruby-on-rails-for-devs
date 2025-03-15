@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RailsBasics::Application.routes.draw do
   resources :things
 

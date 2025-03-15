@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'A thing' do
@@ -43,7 +45,7 @@ describe 'A thing' do
 
     it 'can be deleted' do
       thing.destroy
-      Thing.count.should == 0
+      Thing.count.should.zero?
     end
   end
 end

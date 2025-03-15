@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Implement a subclass of `Hash` called `Mash` that allows reading and writing values without having to use `h[key]`.
 
 #     ```ruby
@@ -10,14 +12,14 @@
 
 class Mash < Hash
   def initialize(hash = {})
-    super(nil) # note that Hash takes a default value as parameter, not an initial value
+    super(nil) # NOTE: that Hash takes a default value as parameter, not an initial value
 
     hash.each_pair do |key, value|
       self[key.to_s] = value
     end
   end
 
-  def method_missing(name, *args, &block)
+  def method_missing(name, *args)
     if name.to_s.end_with?('=')
       self[name.to_s.chomp('=')] = args.first
     else

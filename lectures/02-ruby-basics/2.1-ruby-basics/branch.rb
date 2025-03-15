@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # if / elsif / else
 if 2 + 2 == 5
   puts '2+2 is 5'

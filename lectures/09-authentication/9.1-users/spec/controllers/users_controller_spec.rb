@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe UsersController do
@@ -144,7 +146,9 @@ describe UsersController do
     describe 'POST create' do
       describe 'with valid params' do
         it 'creates a new user' do
-          post :create, user: { 'name' => 'test', 'email' => 'user@example.com', 'password' => 'password', 'password_confirmation' => 'password' }
+          post :create,
+               user: { 'name' => 'test', 'email' => 'user@example.com', 'password' => 'password',
+                       'password_confirmation' => 'password' }
           User.count.should == 2
           User.last.name.should == 'test'
         end
@@ -171,7 +175,7 @@ describe UsersController do
     describe 'DELETE destroy' do
       it 'destroys the requested user' do
         delete :destroy, id: @user.id.to_s
-        User.count.should == 0
+        User.count.should.zero?
       end
     end
   end

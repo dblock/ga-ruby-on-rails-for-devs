@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class User < ActiveRecord::Base
   attr_accessor :password
+
   attr_accessible :name, :email, :password, :password_confirmation, :encrypted_password
   validates_uniqueness_of :email
   validates_presence_of :email

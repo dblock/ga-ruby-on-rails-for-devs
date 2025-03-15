@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Fabricator(:gadget) do
   name { sequence { |i| "Gadget #{i}" } }
   type { %w[HeaderGadget SidebarGadget].sample }

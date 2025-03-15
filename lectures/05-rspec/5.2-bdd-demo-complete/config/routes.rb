@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 BddDemo::Application.routes.draw do
   resources :posts
 

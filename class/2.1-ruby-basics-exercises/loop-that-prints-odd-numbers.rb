@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 #  Implement a loop that prints odd numbers under 10.
 #

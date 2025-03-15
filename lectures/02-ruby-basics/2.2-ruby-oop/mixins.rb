@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Incrementable
   def increment
     to_i + 1

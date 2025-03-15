@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Fabricator(:widget) do
   name { sequence { |i| "Widget #{i}" } }
 end

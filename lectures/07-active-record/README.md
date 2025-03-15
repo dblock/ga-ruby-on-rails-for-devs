@@ -1,13 +1,10 @@
-Lecture 7: Active-Record
-========================
+# Lecture 7: Active-Record
 
-Objective
----------
+## Objective
 
 Dive into `ActiveRecord`.
 
-Class Materials
----------------
+## Class Materials
 
 * [Basic Active Record Basics and TDD](7.1-active-record.md)
 * [Advanced Active Record](7.2-active-record-advanced.md)

@@ -1,13 +1,10 @@
-Lecture 4: Rails MVC
-====================
+# Lecture 4: Rails MVC
 
-Objective
----------
+## Objective
 
 Build a basic Rails application with Rails tools, then from scratch. Exercise the fundamentals of test-driven development.
 
-Class Materials
----------------
+## Class Materials
 
 * [Introduction to Rails](4.1-rails-basics.md)
 * [Live Rails MVC Application and Scaffold](4.2-rails-mvc-scaffold.md)

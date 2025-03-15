@@ -1,5 +1,7 @@
 #
-# Add a `squared_euclidean_distance` method to the `Hash` class that takes another `Hash` as a parameter and calculates the euclidean distance with another Hash. For example, a Euclidean distance between `{ x: 1, y: 2 }` and `{ x: 3, y: 4 }` is `(1 - 3)^2 + (2 - 4)^2`.
+# Monkey patch the `Hash` class with a new `squared_euclidean_distance` method that takes another `Hash` as a parameter,
+# and calculates the squared Euclidean distance with it. The squared Euclidean distance between `{ x: 1, y: 2 }` and
+# `{ x: 3, y: 4 }` is `(1 - 3)**2 + (2 - 4)**2`.
 #
 #     {}.squared_euclidean_distance({}) # 0
 #     { x: 1, y: 2 }.squared_euclidean_distance({ z: 3 }) # 14
@@ -11,7 +13,7 @@
 
 class Hash
   def self.squared_euclidean_distance(lhs, rhs)
-    lhs.merge(rhs) { |_k, l, r| r - l }.values.inject(0) { |s, i| s + i**2 }
+    lhs.merge(rhs) { |_k, l, r| r - l }.values.sum { |i| i**2 }
   end
 
   def squared_euclidean_distance(rhs)

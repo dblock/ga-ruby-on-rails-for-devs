@@ -1,13 +1,10 @@
-Lecture 9: RESTful Authentication
-=================================
+# Lecture 9: Authentication
 
-Objective
----------
+## Objective
 
-Introduce RESTful with users and user sessions.
+Learn about authentication in Rails.
 
-Class Materials
----------------
+## Class Materials
 
-* [User Authentication](9.1-users.md)
+* [Users and Authentication](9.1-users.md)
 

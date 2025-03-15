@@ -1,13 +1,10 @@
-Lecture 6: Ruby Meta-Programming
-================================
+# Lecture 6: Ruby Meta-Programming
 
-Objective
----------
+## Objective
 
 Learn about Ruby meta-programming.
 
-Class Materials
----------------
+## Class Materials
 
 * [Real Ruby and Meta-Programming](6.1-real-ruby.md)
 

@@ -1,13 +1,10 @@
-Lecture 3: Rack
-===============
+# Lecture 3: Rack
 
-Objective
----------
+## Objective
 
 Learn about Rack and build a simple web application.
 
-Class Materials
----------------
+## Class Materials
 
 * [Introduction to Rack](3.1-rack-basics.md)
 

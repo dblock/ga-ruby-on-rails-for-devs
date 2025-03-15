@@ -1,18 +1,14 @@
-Lecture 10: RESTful APIs
-========================
+# Lecture 10: RESTful API
 
-Objective
----------
+## Objective
 
-Develop a practical RESTful API.
+Learn about RESTful APIs.
 
-REST
-----
+## REST
 
-REST stands for *Representational State Transfer*. It's an architecture style for designing networked applications. REST is all about exposing *resources* via HTTP.
+REST is an architectural style for designing networked applications.
 
-Class Materials
----------------
+## Class Materials
 
-* [RESTful in Rails](10.1-restful-rails.md)
+* [RESTful Rails](10.1-restful-rails.md)
 
